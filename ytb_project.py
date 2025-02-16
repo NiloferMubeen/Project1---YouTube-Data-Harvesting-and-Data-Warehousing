@@ -308,7 +308,7 @@ if menu == "Migrate to SQL":
         if channel_id != '':
                 button3 = st.button("Start Migration")
                 if button3:
-                        conn = pg2.connect(database = 'Youtube_harvest',user = 'postgres',password= 'SU',port=5433)
+                        conn = pg2.connect(database = 'Youtube_harvest',user = 'postgres',password= 'SU',port=5432)
                         cur = conn.cursor()
                         try:
                                 def sql_tables():
@@ -327,7 +327,7 @@ if menu == "Migrate to SQL":
 # SQL QUERIES
 if menu == "SQL Queries":
        
-                conn = pg2.connect(database = 'Youtube_harvest',user = 'postgres',password= 'SU',port=5433)
+                conn = pg2.connect(database = 'Youtube_harvest',user = 'postgres',password= 'SU',port=5432)
                 cur = conn.cursor()
                 option = st.selectbox("Queries:",
                         ("None",
